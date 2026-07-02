@@ -1,95 +1,182 @@
-# Colegio Dom Pedro II
-# turma 3 A
-# Maesuely Vitótia dos Santos da Silva
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guia de Psicologia</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  .nome-container {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .nome {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+  }
+  .instituicoes {
+    font-size: 14px;
+    color: #777;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  #conteudo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body>
 
-# Psicologia
+<h1>Guia Completo de Psicologia</h1>
+<div class="nome-container">
+  <div class="nome">Marsuély Vitória dos Santos da Silva</div>
+  <div class="instituicoes">Colégio Dom Pedro II | 3 A</div>
+</div>
 
-Este projeto apresenta uma visão abrangente sobre a Psicologia, abordando seus aspectos positivos e negativos, tempo de curso, salário, origem, principais áreas de atuação, evolução histórica e impacto social.
+<div class="menu">
+  <button onclick="mostrarConteudo('lado_bom')">Lado Bom</button>
+  <button onclick="mostrarConteudo('reunem')">Reúnem</button>
+  <button onclick="mostrarConteudo('tempo_curso')">Tempo de Curso</button>
+  <button onclick="mostrarConteudo('salario')">Salário</button>
+  <button onclick="mostrarConteudo('origem')">Origem</button>
+  <button onclick="mostrarConteudo('como_surgiu')">Como surgiu</button>
+  <button onclick="mostrarConteudo('curiosidades')">Curiosidades</button>
+  <button onclick="mostrarConteudo('dicas')">Dicas</button>
+</div>
 
----
+<div id="conteudo">
+  <p>Selecione uma opção acima para obter informações.</p>
+</div>
 
-## TEXTOS
+<script>
+const conteudos = {
+  lado_bom: `
+    <h2>Lado bom da profissão</h2>
+    <p>Aspectos positivos da profissão de psicólogo:
+    - Contribuir para a melhora da saúde mental e qualidade de vida das pessoas.
+    - Trabalhar em diversas áreas, como clínica, escolar, organizacional, esportiva, social e pesquisa.
+    - Possibilidade de atuar de forma autônoma, abrindo consultório próprio ou oferecendo serviços online.
+    - Desenvolvimento de habilidades interpessoais, empatia, escuta ativa e comunicação eficaz.
+    - Crescimento pessoal ao compreender diferentes comportamentos e trajetórias humanas.
+    - Trabalho flexível com possibilidade de horários adaptáveis e ambientes variados.
+    - Participação em projetos sociais, educativos, políticos e de pesquisa.
+    - Alta demanda no mercado, especialmente em tempos de maior conscientização sobre saúde mental.
+    - Potencial para especializações que aumentam a valorização profissional e ganhos financeiros.
+    - Contribuir para a construção de uma sociedade mais empática e saudável.</p>
+  `,
+  reunem: `
+    <h2>Quem atua na área</h2>
+    <p>Profissionais que atuam na área da Psicologia vêm de diferentes formações e atuam em diversos contextos:
+    - Psicólogos clínicos atendem pacientes em consultórios, hospitais, clínicas e centros de saúde.
+    - Psicólogos escolares atuam em escolas, universidades e programas de apoio ao estudante.
+    - Psicólogos organizacionais trabalham com recursos humanos, recrutamento, treinamento e desenvolvimento.
+    - Psicólogos esportivos auxiliam atletas na preparação mental e controle de desempenho.
+    - Psicólogos sociais atuam em ONGs, programas governamentais, projetos de inclusão social.
+    - Neuropsicólogos avaliam funções cognitivas e reabilitam déficits relacionados ao cérebro.
+    - Psicoterapeutas utilizam diferentes abordagens terapêuticas para tratamento de transtornos.
+    - Pesquisadores e professores atuam na academia, contribuindo com estudos e formação de novas gerações.
+    - Muitos profissionais trabalham de forma autônoma, oferecendo atendimentos particulares, palestras e cursos.
+    Ambientes de trabalho incluem hospitais, escolas, empresas, clínicas, instituições de pesquisa e órgãos públicos.</p>
+  `,
+  tempo_curso: `
+    <h2>Tempo de curso</h2>
+    <p>A graduação em Psicologia costuma ter duração de 4 a 5 anos, dependendo da instituição e do país.
+    - O curso inclui disciplinas teóricas, práticas, estágios supervisionados e projetos de pesquisa.
+    - É obrigatório realizar estágio supervisionado para adquirir experiência prática.
+    - Após a graduação, há possibilidades de especialização, mestrado e doutorado.
+    - Cursos de pós-graduação variam de 1 a 3 anos e permitem atuação em áreas específicas.
+    - Investir em cursos de atualização, workshops e treinamentos contínuos é fundamental para se destacar.
+    - Algumas instituições oferecem programas de formação mais rápidos, mas a formação completa é recomendada.
+    - A formação ética e o desenvolvimento de habilidades de escuta, análise e intervenção são essenciais.</p>
+  `,
+  salario: `
+    <h2>Salário médio</h2>
+    <p>O salário de um psicólogo pode variar bastante com base na experiência, especializações, região e setor de atuação:
+    - Profissionais iniciantes podem ganhar entre R$ 2.500 a R$ 4.000 mensais.
+    - Psicólogos com experiência e especializações podem alcançar salários de R$ 5.000 a R$ 8.000 ou mais.
+    - Psicólogos autônomos podem definir seus próprios valores por sessão, podendo variar de R$ 100 a R$ 300 ou mais.
+    - Trabalhar em instituições públicas oferece estabilidade, mas geralmente salários mais baixos.
+    - No setor privado, há potencial de ganhos maiores, especialmente com uma boa rede de clientes.
+    - Algumas áreas de atuação, como neuropsicologia ou psicoterapia, tendem a pagar melhor.
+    - Além do salário fixo, ganhos com palestras, cursos e atendimentos particulares aumentam o rendimento.</p>
+  `,
+  origem: `
+    <h2>Origem da Psicologia</h2>
+    <p>A Psicologia surgiu no final do século XIX, como uma tentativa de compreender o comportamento humano de forma científica.
+    - Wilhelm Wundt, na Alemanha, fundou o primeiro laboratório de Psicologia em 1879, marcando o início da disciplina.
+    - Inicialmente, focava no estudo de processos mentais, percepção, sensações e atenção, usando métodos experimentais.
+    - No século XX, diferentes abordagens teóricas emergiram, como o behaviorismo, a psicanálise, o humanismo e o cognitivismo.
+    - A profissão foi regulamentada em vários países ao longo do tempo, com conselhos e códigos de ética.
+    - A origem da Psicologia está relacionada à busca por entender o comportamento humano de forma objetiva e científica.
+    - A evolução histórica permitiu a diversificação de técnicas de avaliação, intervenção e pesquisa.</p>
+  `,
+  como_surgiu: `
+    <h2>Como surgiu a Psicologia</h2>
+    <p>A psicologia surgiu da necessidade de explicar o comportamento humano com métodos científicos e empíricos.
+    - Antes disso, explicações eram baseadas em crenças filosóficas, religiosas ou empirismo sem rigor científico.
+    - Wilhelm Wundt e outros pioneiros estabeleceram a psicologia como ciência, usando experimentos e observações sistemáticas.
+    - Com o passar do tempo, novas abordagens surgiram, cada uma com foco distinto:
+      - Behaviorismo: ênfase no comportamento observável e na aprendizagem.
+      - Psicanálise: foco no inconsciente, emoções e experiências passadas.
+      - Psicologia Humanista: busca compreender o potencial humano e autorrealização.
+      - Cognitivismo: estudo dos processos mentais internos, como memória, atenção e resolução de problemas.
+    - A evolução dessas abordagens ampliou a compreensão do comportamento, levando à criação de técnicas variadas de intervenção e avaliação.
+    </p>
+  `,
+  dicas: `
+    <h2>Dicas para quem quer seguir essa carreira</h2>
+    <ul>
+      <li>Invista na sua formação acadêmica com dedicação e busca constante por atualização.</li>
+      <li>Desenvolva habilidades de escuta ativa, empatia, comunicação e resolução de conflitos.</li>
+      <li>Faça estágios e práticas supervisionadas para adquirir experiência real.</li>
+      <li>Participe de grupos de estudo, eventos e congressos para ampliar sua rede de contatos.</li>
+      <li>Busque especializações que estejam alinhadas às suas áreas de interesse.</li>
+      <li>Mantenha-se atualizado com as novas técnicas, abordagens e legislações.</li>
+      <li>Seja ético, responsável e comprometido com o bem-estar do seu cliente.</li>
+      <li>Considere atuar em diferentes áreas para ampliar suas oportunidades de trabalho.</li>
+    </ul>
+  `
+};
 
-## Lado Bom da Psicologia
-- Compreensão profunda do comportamento humano, emoções e pensamentos
-- Ajuda na resolução de conflitos pessoais, familiares, escolares e profissionais
-- Promove a saúde mental, combate ao estigma e melhora da qualidade de vida
-- Diversas áreas de atuação, como clínica, organizacional, educacional, esportiva, forense, neuropsicologia, entre outras
-- Desenvolvimento de habilidades como empatia, escuta ativa, comunicação e resolução de problemas
-- Possibilidade de atuar em diferentes setores: hospitais, clínicas, escolas, empresas, ONGs, pesquisa
-- Incentivo à pesquisa, inovação e avanços científicos na área da saúde mental
-- Contribuição para políticas públicas e programas de prevenção
+function mostrarConteudo(topico) {
+  document.getElementById('conteudo').innerHTML = conteudos[topico] || "<p>Conteúdo não disponível.</p>";
+}
 
-## Lado Ruim da Psicologia
-- Alta concorrência no mercado de trabalho, especialmente nas áreas tradicionais
-- Necessidade de formação contínua, pós-graduações, especializações e atualizações constantes
-- Trabalho emocionalmente desgastante, lidando com sofrimento e situações delicadas
-- Salários variáveis: podem ser baixos no início da carreira ou em áreas de menor demanda
-- Dificuldade de reconhecimento em alguns setores e regiões
-- Longas horas de trabalho, especialmente para profissionais autônomos
-- Desafios éticos, sigilo profissional e responsabilidade social
-- Estresse e burnout podem afetar profissionais que lidam com casos difíceis
+// Carregar conteúdo inicial
+mostrarConteudo('lado_bom');
+</script>
 
-## Tempo de Curso
-- **Graduação em Psicologia**: duração média de 4 anos
-- **Estágios obrigatórios** durante o curso, com supervisão profissional
-- Pós-graduação, mestrado e doutorado podem levar de 1 a 7 anos adicionais
-- Cursos de extensão, especializações e capacitações contínuas
-- Formação em áreas específicas, como terapia familiar, neuropsicologia, saúde mental, entre outras
-
-## Salário
-- A média salarial no Brasil varia entre R$ 2.000 a R$ 8.000 mensais
-- Psicólogos autônomos ou com clínicas próprias podem alcançar ganhos superiores
-- Profissionais em hospitais, clínicas, escolas, empresas e ONGs geralmente têm salários mais altos
-- Região influencia bastante: capitais e regiões metropolitanas oferecem melhores remunerações
-- Empregos na iniciativa privada costumam pagar mais do que no setor público
-- Profissionais com especializações e experiência tendem a receber mais
-- Possibilidade de ganhos adicionais com atendimentos particulares, palestras, treinamentos e consultorias
-
-## Onde e Como Surgiu a Psicologia
-A Psicologia surgiu no final do século XIX, na Alemanha, como uma disciplina científica dedicada ao estudo do comportamento, emoções e processos mentais. Seus principais marcos históricos incluem:
-
-- **Wilhelm Wundt (1832-1920)**: fundador do primeiro laboratório de Psicologia Experimental, em Leipzig, em 1879
-- A Psicologia inicialmente focou em métodos experimentais para entender o funcionamento da mente
-- No século XX, surgiram diferentes correntes teóricas:
-  - **Behaviorismo**: foco na observação de comportamentos externos (John Watson, B.F. Skinner)
-  - **Psicanálise**: exploração do inconsciente (Sigmund Freud)
-  - **Humanismo**: ênfase na potencialidade humana (Carl Rogers, Abraham Maslow)
-  - **Cognitivismo**: estudo dos processos mentais e pensamento
-  - **Neuropsicologia**: ligação entre cérebro e comportamento
-- A Psicologia evoluiu para uma ciência multidisciplinar, integrando conhecimentos de biologia, neurociência, sociologia e educação
-- Hoje, a Psicologia é reconhecida como uma ciência fundamental para compreender e promover o bem-estar social e individual
-
-## Principais Áreas de Atuação
-- **Clínica**: terapia individual, de casal, familiar, grupos
-- **Organizacional**: recursos humanos, desenvolvimento de equipes, coaching
-- **Educacional**: orientação escolar, psicopedagogia, inclusão
-- **Esportiva**: preparação mental de atletas
-- **Forense**: avaliação de testemunhas, perícias criminais
-- **Neuropsicologia**: avaliação e reabilitação de funções cerebrais
-- **Saúde Mental**: prevenção, tratamento de transtornos mentais
-- **Pesquisa Científica**: estudos acadêmicos e tecnológicos
-
-## Habilidades Necessárias
-- Boa comunicação e escuta ativa
-- Empatia e sensibilidade
-- Capacidade de análise e resolução de problemas
-- Ética profissional e sigilo
-- Paciência e resistência emocional
-- Atualização constante sobre novas pesquisas e técnicas
-- Habilidade para trabalhar em equipe e com diferentes públicos
-
-## Desafios Atuais e Futuro da Psicologia
-- Aumento da demanda por serviços de saúde mental devido à crescente conscientização
-- Uso de tecnologias digitais e teleterapia para ampliar o alcance
-- Necessidade de lidar com o aumento de transtornos relacionados ao estresse, ansiedade, depressão
-- Inserção em áreas emergentes como inteligência artificial, big data e neurociência aplicada
-- Desafios na formação de profissionais capazes de atuar em um mundo em rápida mudança
-- Importância de políticas públicas e acessibilidade aos serviços de Psicologia
-
-## Importância Social
-A Psicologia desempenha papel crucial na promoção da saúde mental, na prevenção de doenças, na inclusão social e na melhora da qualidade de vida. Seus profissionais ajudam a construir sociedades mais empáticas, resilientes e conscientes dos seus próprios potenciais.
-
----
-
-Quero fazer psicologia por amor à profissão, por querer cuidar da saúde mental das pessoas.
+</body>
+</html>
